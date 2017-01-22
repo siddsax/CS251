@@ -1,24 +1,13 @@
-#!/bin/bash
-if [[ $# != 2 ]];then 
-	echo "You have entered less or more than 2 numbers"
-	exit 1
-fi
+differ=$((n-num_stud))
+echo "$differ"
+if (( "$differ" > 0 ))
+then
+  for ((i=1;i<=differ;i++)) do
+  	echo "${students[num_stud]} with ${small_TAs[$i]}"
+    num_stud="$((num_stud+1))"
+  done	
 
-case $1 in
-    ''|*[!0-9]*) echo $1 is not a number ;;
-esac
+fi  	
 
-case $2 in
-    ''|*[!0-9]*) echo $2 is not a number ;;
-esac
-var_1="$(echo $1'>'$2 | bc -l)"
-var_2="$(echo $1'<'$2 | bc -l)"
-if (( "$var_1" == 1 ))
-then 
-  echo "$1 > $2"
-elif (( "$var_2" == 1 ))
-then 
-  echo "$1 < $2"
-else 	
-  echo "$2 = $1" 
-fi
+
+      small_TAs[$k]=${TAs[$TA_indice]}
