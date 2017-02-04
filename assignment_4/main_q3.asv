@@ -1,0 +1,22 @@
+i = 1;
+while (i<7)
+    n=10^i;
+    vector = zeros(1,n);
+    j = 0;
+    sum = 0;
+    sum_sq = 0;
+    
+        x = rand(1,n);
+        vector(1,j) = exponential(x);
+        sum = sum + exponential(x);
+        sum_sq = sum_sq + exponential(x)^2;
+        j = j+1;
+    
+    variance = sum_sq/n- (sum/n)^2;
+    mean = sum/n;
+    diff = mean - lambda;
+    disp(variance)
+    disp(mean)
+    disp(diff);
+    i = i + 1;
+end    
