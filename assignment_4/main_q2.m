@@ -1,2 +1,5 @@
 format long
-q2(23,23,4);
+n=input ("Enter N : ");
+m=input ("Enter M : ");
+d=input ("Enter D : ");
+q2(n,m,d);
